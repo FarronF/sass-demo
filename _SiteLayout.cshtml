@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@Page.Title - DNP Project</title>
+
+    <link href="~/css/gridlex/gridlex.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/app.min.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <nav id="main-menu" class="menu full-width @(Page.Hero != null ? "menu-hero" : "")">
+        <div class="main-menu-primary">
+            <a href="~/Default.cshtml" class="logo-link">
+                <object class="logo" type="image/svg+xml" data="img/shared/logo.svg">
+
+                </object>
+            </a>
+            <a href="#" onclick="toggleMenu()" class="hamburger-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="expandable">
+            <div class="grid-1_medium-3 menu-links">
+                <a href="Default.cshtml" class="col main-menu-link"><span>PORTFOLIO</span></a>
+                <a href="About.cshtml" class="col main-menu-link"><span>ABOUT</span></a>
+                <a href="Contact.cshtml" class="col main-menu-link"><span>CONTACT</span></a>
+            </div>
+        </div>
+    </nav>
+    <section class="content">
+        <section class="content-wrapper main-content">
+            @RenderBody()
+        </section>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+</html>

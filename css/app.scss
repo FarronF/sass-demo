@@ -1,0 +1,76 @@
+﻿/* csslint ignore:start */
+@import 'breakpoints';
+@import 'text';
+@import 'menu';
+@import 'images';
+
+/*@import 'gridlex/gridlex';*/
+
+html {
+  font-size: 75%;
+}
+
+@media #{$medium-up} {
+	html {
+        font-size: 95%;
+    }
+}
+
+@media #{$large-up} {
+	html {
+        font-size: 100%;
+    }
+
+
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    html {
+  font-size: 75%;
+}
+
+@media #{$medium-up} {
+	html {
+        font-size: 80%;
+    }
+}
+
+@media #{$large-up} {
+	html {
+        font-size: 80%;
+    }
+}
+}
+
+
+body{
+    margin:0;
+}
+
+.full-width {
+	width: 100%;
+	max-width: none;
+ 	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.sub-page-content{
+	padding: 0rem 1rem;
+    @extend .center-horizontal;
+
+    @media #{$medium-only}
+    {
+        width: 85%;
+    }
+
+    @media #{$large-up}
+    {
+        width: 75rem;
+    }
+      
+}
+
+
+/* csslint ignore:end */

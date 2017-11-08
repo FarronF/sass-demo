@@ -1,0 +1,134 @@
+﻿.main-page-image-holder img {
+    height: 100%;
+    width: 100%;
+}
+
+.main-page-image-holder img, .main-menu-link, .menu, .expanded {
+    transition: all 0.50s;
+    -webkit-transition: all 0.50s;
+}
+
+.main-page-image-holder:hover img {
+    opacity: .75;
+}
+
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.sub-page-content img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 80vh;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        max-width : 90vw;
+    }
+}
+
+.break-view-height {
+    max-height: none !important;
+}
+
+.image-plus-text {
+    position: relative;
+}
+
+.image-text-holder {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 1rem;
+    width: 95%;
+
+    
+    @media #{$large-up} {
+        width: 75%;
+    }
+}
+
+.lean-to-steer {
+    
+    @media #{$medium-only} {
+        top: 5%;
+    }
+
+    @media #{$large-up} {
+        top: 15%;
+    }
+
+    
+    @media #{$small-only} {
+        position: relative;
+    }
+}
+
+.image-break-medium{
+    
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+
+    -webkit-box-orient: horizontal; 
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    flex-direction: row;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;  
+    align-items: center;
+
+     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            max-width : 90vw;
+    }
+
+    > :first-child {
+        width:100%;
+    }
+    
+    > :last-child {
+        width:100%;        
+    }
+
+    @media #{$medium-up} {
+        > :first-child {
+            width:60%;
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                img{
+                    max-width : 54vw;
+                }
+            }
+        }
+    
+        > :last-child {
+            width:40%;
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                img{
+                    max-width : 36vw;
+                }
+            }
+        }
+    }
+
+
+}
+
+    /*.image-group + .image-group{
+    margin-top: 6rem;
+    text-align: center
+}*/
