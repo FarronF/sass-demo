@@ -1,10 +1,13 @@
 ﻿/* csslint ignore:start */
+@import 'globals';
+@import 'functions';
+@import 'mixins';
 @import 'breakpoints';
+@import "faz-utilities/faz-utilities-positioning";
 @import 'text';
 @import 'menu';
 @import 'images';
-
-/*@import 'gridlex/gridlex';*/
+@import 'projects';
 
 html {
   font-size: 75%;

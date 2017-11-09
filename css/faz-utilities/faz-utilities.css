@@ -1,0 +1,218 @@
+﻿/*#region Faz Utilities*/
+/*#region Boostrap Overrides*/
+@media only screen and (min-width: 768px) {
+  .hidden-xs.inline-override {
+    display: inline !important; } }
+
+@media only screen and (min-width: 992px) {
+  .inline-md {
+    display: block; } }
+
+@media only screen and (max-width: 767px) {
+  td.visible-xs.block-override {
+    display: block !important; } }
+
+@media only screen and (min-width: 992px) {
+  .col-override-md {
+    float: none; }
+  .collapse {
+    display: block;
+    height: auto !important; } }
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.container-fluid-constrained {
+  max-width: 1170px; }
+
+@media only screen and (max-width: 991px) {
+  .container-fluid-sm {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; } }
+
+/*#endregion*/
+/*#region Bootstrap Rows/Columns*/
+.equal-height {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap; }
+
+@media only screen and (min-width: 768px) {
+  .is-table-row-sm {
+    display: table; }
+  .is-table-row-sm [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top; } }
+
+.row-col-small-margins-bottom [class*="col-"] {
+  margin-bottom: .5rem; }
+
+.row-col-medium-margins-bottom [class*="col-"] {
+  margin-bottom: 1rem; }
+
+.row.no-gutter [class*="col-"]:not(:first-child) {
+  padding-left: 0; }
+
+.row.no-gutter [class*="col-"]:not(:last-child) {
+  padding-right: 0; }
+
+.no-gutter[class*="col-"] {
+  padding-left: 0;
+  padding-right: 0; }
+
+@media only screen and (min-width: 992px) {
+  .row.no-gutter-md [class*="col-"]:not(:first-child) {
+    padding-left: 0; }
+  .row.no-gutter-md [class*="col-"]:not(:last-child) {
+    padding-right: 0; }
+  .no-gutter-md[class*="col-"] {
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media only screen and (min-width: 768px) {
+  .row.no-gutter-sm [class*="col-"]:not(:first-child) {
+    padding-left: 0; }
+  .row.no-gutter-sm [class*="col-"]:not(:last-child) {
+    padding-right: 0; }
+  .no-gutter-sm[class*="col-"] {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/*#endregion*/
+/*#region Buttons*/
+/**
+ * Tested on Bootstrap 3.3.2 
+ * Usage: <button class="btn btn-transparent" type="button">Click me</button>
+ */
+.btn-transparent {
+  background: transparent;
+  color: #F2F2F2;
+  -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+  border: 2px solid white; }
+
+.btn-transparent:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+/*#endregion*/
+/*#region Images*/
+.background-image-center {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+
+/*#endregion*/
+/*#region Positioning*/
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.center-horizontal {
+  display: table;
+  margin: 0 auto; }
+
+.center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+/*#endregion*/
+/*#region Tables*/
+@media only screen and (max-width: 767px) {
+  #no-more-tables table {
+    border: 1px solid #ccc; }
+  /*https://bootsnipp.com/snippets/featured/no-more-tables-respsonsive-table*/
+  /* Force table to not be like tables anymore */
+  #no-more-tables table,
+  #no-more-tables thead,
+  #no-more-tables tbody,
+  #no-more-tables th,
+  #no-more-tables td,
+  #no-more-tables tr {
+    display: block; }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+  #no-more-tables tr {
+    border: 1px solid #ccc; }
+  #no-more-tables td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-wrap: break-word; }
+  #no-more-tables td:empty:after {
+    content: "\00a0"; }
+  #no-more-tables td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 40%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold; }
+  /*
+	Label the data
+	*/
+  #no-more-tables td:before {
+    content: attr(data-title); }
+  #no-more-tables tbody > tr:nth-child(even) > td,
+  #no-more-tables tbody > tr:nth-child(even) > th {
+    background-color: #f2f2f2; } }
+
+.table-hover > tbody > tr:hover {
+  cursor: pointer; }
+
+/*#endregion*/
+/*#region Text*/
+span.line-breakable {
+  display: inline-block; }
+
+.word-wrap {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word; }
+
+.word-wrap-hyphenated {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
+/*#endregion*/
+/*#endregion*/
+

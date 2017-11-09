@@ -1,0 +1,123 @@
+﻿/*#region Boostrap Overrides*/
+@media only screen and (min-width: 768px) {
+
+    .hidden-xs.inline-override {
+        display: inline !important;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .inline-md {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    td.visible-xs.block-override {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .col-override-md {
+        float: none;
+    }
+
+    .collapse {
+        display: block;
+        height: auto !important;
+    }
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid-constrained {
+    max-width: 1170px;
+}
+
+@media only screen and (max-width : 991px) {
+    .container-fluid-sm {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+/*#endregion*/
+
+/*#region Bootstrap Rows/Columns*/
+.equal-height {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width : 768px) {
+    .is-table-row-sm {
+        display: table;
+    }
+
+        .is-table-row-sm [class*="col-"] {
+            float: none;
+            display: table-cell;
+            vertical-align: top;
+        }
+}
+
+.row-col-small-margins-bottom [class*="col-"] {
+    margin-bottom: .5rem;
+}
+
+.row-col-medium-margins-bottom [class*="col-"] {
+    margin-bottom: 1rem;
+}
+
+.row.no-gutter [class*="col-"]:not(:first-child) {
+    padding-left: 0;
+}
+
+.row.no-gutter [class*="col-"]:not(:last-child) {
+    padding-right: 0;
+}
+
+.no-gutter[class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media only screen and (min-width : 992px) {
+    .row.no-gutter-md [class*="col-"]:not(:first-child) {
+        padding-left: 0;
+    }
+
+    .row.no-gutter-md [class*="col-"]:not(:last-child) {
+        padding-right: 0;
+    }
+
+    .no-gutter-md[class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .row.no-gutter-sm [class*="col-"]:not(:first-child) {
+        padding-left: 0;
+    }
+
+    .row.no-gutter-sm [class*="col-"]:not(:last-child) {
+        padding-right: 0;
+    }
+
+    .no-gutter-sm[class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+/*#endregion*/

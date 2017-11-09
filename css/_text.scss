@@ -8,6 +8,13 @@ src: url("../fonts/FuturaTEEMed.ttf");
     src: url("../fonts/FUTURAN.TTF");
 }
 
+.main-header {
+    font-size: rem-calc(48px);
+    @extend .center-horizontal;
+    font-weight: bold;
+    color: $color-brand-primary;
+}
+
 p {
    	font-family: Futuran;
     @media #{$medium-up}{

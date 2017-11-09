@@ -1,0 +1,13 @@
+﻿.project-back {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.project-images > * + * {
+    margin-top: 6rem;
+}
+
+.project-images > :not(.text-holder) {    
+    text-align: center
+}
