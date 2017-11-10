@@ -2,3 +2,15 @@
     $remSize: $size / 16px;//16px is default font size for most browsers
     @return #{$remSize}rem;
 }
+
+$text-color-dark: #000000; //black
+$text-color-light: #ffffff; //white
+
+@function text-color-from-background($background-color) {
+  @if (lightness($background-color) > 50) {
+    @return $text-color-dark; // Lighter backgorund, return dark color
+  } 
+  @else {
+    @return $text-color-light; // Darker background, return light color
+  }
+}

@@ -1,9 +1,7 @@
 ﻿// Here we define the lower and upper bounds for each media size
-$small-range: (0em, 45em); /* 0, 640px */
-$medium-range: (45.0625em, 75em); /* 641px, 1024px */
-$large-range: (75.0625em, 90em); /* 1025px, 1440px */
-$xlarge-range: (90.0625em, 120em); /* 1441px, 1920px */
-$xxlarge-range: (120.0625em); /* 1921px */
+$small-range: (0em, 45em); /* 0, 720px */
+$medium-range: (45.0625em, 75em); /* 721px, 1200px */
+$large-range: (75.0625em); /* 1201px+*/
 
 // We use these functions to get the ranges for the media queries variables. 
 @function lower-bound($range){
@@ -34,9 +32,3 @@ $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max
 
 $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
 $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
-
-$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
-$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
-
-$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
-$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";

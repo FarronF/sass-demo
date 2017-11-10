@@ -1,109 +1,28 @@
-﻿@font-face {
-font-family: "Futura-Medium";
-src: url("../fonts/FuturaTEEMed.ttf");
-}
-
-@font-face{
-    font-family: "Futuran";
-    src: url("../fonts/FUTURAN.TTF");
-}
-
-.main-header {
-    font-size: rem-calc(48px);
+﻿.main-header {
+    font-size: rem-calc(64px);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+        
     @extend .center-horizontal;
+    
     font-weight: bold;
     color: $color-brand-primary;
 }
 
-p {
-   	font-family: Futuran;
-    @media #{$medium-up}{
-        font-size: .9rem
-    }
-}
-
-h1 {
-    font-family: Futura-Medium;
-    letter-spacing: .1em;    
-    font-size: 2rem;
-    font-weight: 100;
-}
-
-
-
-h2, h3, h4, h5, h6, a{
-    font-family: Futuran;
-    letter-spacing: .1em;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    margin-top : .5rem;
-    margin-bottom : .5rem;
-
-    @media #{$medium-up}{
-        margin-top : .75rem;
-        margin-bottom : .75rem;
-    }
-}
-
-
-
-
-
-
-
-/*@media #{$medium-up}{   
-    .text-holder [class*="col"]:not(:first-child){
-        padding-right: 3rem;
-    }
-
-    .text-holder [class*="col"]:not(:last-child){
-        padding-left: 3rem;
-    }
-}*/
-
-
-@media #{$medium-up}{   
-    .text-holder .col_medium-first{
-        padding-right: 3rem;
-    }
-
-    .text-holder .col{
-        padding-left: 3rem;
-    }
-}
-
-h1{
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-.text-holder{
-	margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.text-grey {
-    color: grey;
-}
-
-.text-center {
+.core-value-link{
+    background-color: $color-brand-primary;
     text-align: center;
-}
-
-
-@media #{$medium-up}{   
-    .text-center_medium-up{
-        text-align: center;
+    text-decoration: none;
+    
+    
+    h2 {
+        color: text-color-from-background($color-brand-primary);
+        font-size: 2rem;
+        padding: .5em 0;
     }
-}
 
-.visible-medium-up{
-    display: none;
-    @media #{$medium-up}{ 
-        display: inherit;
+    &:hover {
+        background-color: lighten($color-brand-primary, 10%);
+        @include prefix(transition, .2s ease-in-out, webkit moz o);
     }
 }

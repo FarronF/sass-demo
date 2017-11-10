@@ -1,5 +1,6 @@
 ﻿$all-prefixes: 'webkit', 'moz', 'ms', 'o';
 
+//@include prefix(transition, .2s ease-in-out, webkit moz o);
 @mixin prefix($property, $value, $prefixes: $all-prefixes) {
   @each $prefix in $prefixes {
     #{'-' + $prefix + '-' + $property}: $value;
